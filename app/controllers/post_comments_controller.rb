@@ -12,6 +12,13 @@ class PostCommentsController < ApplicationController
     redirect_to post_image_path(params[:post_image_id])
   end
 
+  # def destroy
+  #   @comment = BookComment.find(params[:id])
+  #   @comment.destroy
+  #   redirect_to post_images_path
+  # end
+
+
   private
 
   def post_comment_params
