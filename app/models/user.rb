@@ -9,7 +9,9 @@ class User < ApplicationRecord
   has_many :post_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
-  
+  validates :profile_image, blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'] }
+
+
 
   def get_profile_image(width, height)
     unless profile_image.attached?
